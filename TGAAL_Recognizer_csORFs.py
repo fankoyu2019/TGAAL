@@ -128,5 +128,5 @@ def Predict_csORFs_by_sORF(input_file, output_file):
                              sorf_list_each.protein, sorf_list_each.sorf_coding, sorf_list_each.proba])
 
 if __name__ == '__main__':
-    Predict_csORFs_by_RNA(input_file="./input/test.fasta", output_file="./output/test_RNA_sORFs_result.csv")
+    Predict_csORFs_by_RNA(input_file="./input/valid_lncRNA.fasta", output_file="./output/TGAAL_RNA_sORFs_result.csv")
     pass
