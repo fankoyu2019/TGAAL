@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e2ed8ab7-e6eb-454f-a3f9-d1ea570ec3c3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/DistanceCalculation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GenerateSamples.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/load_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/match_tuples_negative.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/match_tuples_positive.py" afterDir="false" />
+    <list default="true" id="e2ed8ab7-e6eb-454f-a3f9-d1ea570ec3c3" name="Changes" comment="Initial commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GenerateSamples.py" beforeDir="false" afterPath="$PROJECT_DIR$/GenerateSamples.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TGAAL_Recognizer_csORFs.py" beforeDir="false" afterPath="$PROJECT_DIR$/TGAAL_Recognizer_csORFs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkpoint_ng/train_G_weights.pth" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkpoint_ps/train_G_weights.pth" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,7 +15,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectId" id="2SNCtmQvPOGB7S9vwDoPcetk6WY" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -27,16 +25,16 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/data" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\PycharmProjects\TGAAL\data" />
       <recent name="F:\PycharmProjects\TGAAL\checkpoint_ng" />
       <recent name="F:\PycharmProjects\TGAAL\checkpoint_ps" />
       <recent name="F:\PycharmProjects\TGAAL\utils" />
       <recent name="F:\PycharmProjects\TGAAL" />
-      <recent name="F:\PycharmProjects\TGAAL\data" />
     </key>
   </component>
   <component name="RunManager" selected="Python.TGAAL_Recognizer_csORFs">
@@ -102,6 +100,14 @@
       <option name="presentableId" value="Default" />
       <updated>1688977868810</updated>
     </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <created>1689128807168</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1689128807168</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -126,5 +132,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
   </component>
 </project>
