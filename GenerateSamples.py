@@ -6,12 +6,12 @@ from Vocab import VocabClass
 from utils.vocab_utils import vocab
 
 types = 'ng'
-load_path = './checkpoint_' + types + '/'
+load_path = './checkpoint/'
 file_name = '../data/generator_samples_' + types + '.fa'
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 
-class GeneratorSamplesClass:
+class GenerateSamplesClass:
     def __init__(self, data_dir='../data/', embedding_dim=128, batch_size=64, vocab_size=68,
                  token_len=102, hidden_size=256, dropout=0):
         self.batch_size = batch_size
@@ -27,7 +27,7 @@ class GeneratorSamplesClass:
         if len(load_path) == 0:
             print("[*] Checkpoint not found! Starting from scratch.")
             return 0  # file is not there
-        Trans_G_weights = torch.load(load_path + "train_G_weights.pth", map_location=device)
+        Trans_G_weights = torch.load(load_path + "train_G_weights_" + types + ".pth", map_location=device)
         self.Generator.load_state_dict(Trans_G_weights)
 
     def load_product_data(self, data_dir, filename, vocab, num_steps=102):
@@ -90,7 +90,7 @@ class GeneratorSamplesClass:
 
 
 def main():
-    model = GeneratorSamplesClass()
+    model = GenerateSamplesClass()
     model.save_generator_samples()
 
 
