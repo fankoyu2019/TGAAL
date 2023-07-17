@@ -9,7 +9,8 @@ types = 'ng'
 load_path = './checkpoint/'
 file_name = '../data/generator_samples_' + types + '.fa'
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-
+input_dataset_name='positive_sorf.fa'
+generated_nums = 1000
 
 class GenerateSamplesClass:
     def __init__(self, data_dir='../data/', embedding_dim=128, batch_size=64, vocab_size=68,
@@ -20,8 +21,8 @@ class GenerateSamplesClass:
         self.Generator.to(device)
         self.vocab = vocab
         self.load_model(load_path=load_path)
-        self.ps_0to33_iter = self.load_product_data(data_dir, 'ps_0to33_sorf.fa', self.vocab)
-        self.ng67to100_iter = self.load_product_data(data_dir, 'ng_67to100_sorf.fa', self.vocab)
+        self.input_iter = self.load_data(data_dir, input_dataset_name, self.vocab)
+
 
     def load_model(self, load_path):
         if len(load_path) == 0:
@@ -30,7 +31,7 @@ class GenerateSamplesClass:
         Trans_G_weights = torch.load(load_path + "train_G_weights_" + types + ".pth", map_location=device)
         self.Generator.load_state_dict(Trans_G_weights)
 
-    def load_product_data(self, data_dir, filename, vocab, num_steps=102):
+    def load_data(self, data_dir, filename, vocab, num_steps=102):
         words_list = Vocab.getWordsList(data_dir + filename)
         tokens_array, _ = Vocab.build_array_nmt(words_list, vocab, num_steps)
         tgt = torch.ones((tokens_array.shape[0], 1))
@@ -72,20 +73,25 @@ class GenerateSamplesClass:
     def save_generator_samples(self):
         sample_pool = torch.IntTensor().to(device)
         # generate sample to al_model
-        d_iter = self.ps_0to33_iter if types == 'ps' else self.ng67to100_iter
-        eps = 500 if types == 'ps' else 200
-        for e in range(eps):
+        d_iter = self.input_iter
+        count = 0
+        while True:
             for data in d_iter:
                 real_data, _ = data
                 generate_data = self.generator_sample_batch(real_data)
                 sample_pool = torch.cat([sample_pool, generate_data], dim=0)
-            print('now epoch : [{}]'.format(e))
+                count += 1
+                print('now count : [{}]'.format(count))
+                if count >= generated_nums:
+                    break
+            if count >= generated_nums:
+                break
         with open(file_name, 'w', encoding='utf-8') as file:
             for i in range(len(sample_pool)):
                 fake_seq = sample_pool[i].tolist()
                 eos = '<pad>'
                 fake_txt = ''.join(vocab.to_tokens(fake_seq)).split(eos, 1)[0]
-                print('fake_txt : [ {} ]'.format(fake_txt))
+                # print('fake_txt : [ {} ]'.format(fake_txt))
                 file.write(fake_txt + '\n')
 
 

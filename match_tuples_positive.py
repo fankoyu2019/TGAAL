@@ -28,13 +28,13 @@ def get_Features(seq):
 
 
 # generate p-n pairs
-source_words_data = Vocab.getWordsList("./data/train_positive_sorf.fa")
-target_words_data = Vocab.getWordsList("./data/train_negative_sorf.fa")
+source_words_data = Vocab.getWordsList("./data/positive_sorf.fa")
+target_words_data = Vocab.getWordsList("./data/negative_sorf.fa")
 src_tokens_array, src_valid_len = Vocab.build_array_nmt(source_words_data, vocab, num_steps=102)
 tgt_tokens_array, tgt_valid_len = Vocab.build_array_nmt(target_words_data, vocab, num_steps=102)
 
-ps_seq_list = getSeqList("./data/train_positive_sorf.fa")
-ng_seq_list = getSeqList("./data/train_negative_sorf.fa")
+ps_seq_list = getSeqList("./data/positive_sorf.fa")
+ng_seq_list = getSeqList("./data/negative_sorf.fa")
 
 ps_features_list, ng_features_list = [], []
 
