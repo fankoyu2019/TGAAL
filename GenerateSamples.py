@@ -5,7 +5,7 @@ import Vocab
 from Vocab import VocabClass
 from utils.vocab_utils import vocab
 
-types = 'ng'
+types = 'ps'
 load_path = './checkpoint/'
 file_name = '../data/generator_samples_' + types + '.fa'
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')

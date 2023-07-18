@@ -4,9 +4,6 @@
     <list default="true" id="e2ed8ab7-e6eb-454f-a3f9-d1ea570ec3c3" name="Changes" comment="Initial commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GenerateSamples.py" beforeDir="false" afterPath="$PROJECT_DIR$/GenerateSamples.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/match_tuples_negative.py" beforeDir="false" afterPath="$PROJECT_DIR$/match_tuples_negative.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/match_tuples_positive.py" beforeDir="false" afterPath="$PROJECT_DIR$/match_tuples_positive.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/vocab_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/vocab_utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689308048282</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Initial commit">
+      <created>1689558391444</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1689558391444</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
